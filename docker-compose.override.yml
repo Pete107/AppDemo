@@ -5,12 +5,26 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
-      - CONNECTION_STRING=
-      - ISSUER=
-      - AUDIENCE=
-      - JWT_SECRET=
+      - CONNECTION_STRING=Server=db;Database=Identity;Integrated Security=True;Connect Timeout=30;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
+      - ISSUER=Identity
+      - AUDIENCE=All
+      - JWT_SECRET=SuperSecretJwtStringWhichHappensToBeRealLongAndPointless
     ports:
       - "80:80"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/roots/.aspnet/https:ro
+
+  gamecollectionapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:81
+      - CONNECTION_STRING=Server=db;Database=GameCollection;Integrated Security=True;Connect Timeout=30;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
+      - ISSUER=Identity
+      - AUDIENCE=All
+      - JWT_SECRET=SuperSecretJwtStringWhichHappensToBeRealLongAndPointless
+    ports:
+      - "81:81"
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/roots/.aspnet/https:ro

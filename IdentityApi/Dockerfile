@@ -7,6 +7,7 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["IdentityApi/IdentityApi.csproj", "IdentityApi/"]
+COPY ["CoreLibrary/CoreLibrary.csproj", "CoreLibrary/"]
 RUN dotnet restore "IdentityApi/IdentityApi.csproj"
 COPY . .
 WORKDIR "/src/IdentityApi"

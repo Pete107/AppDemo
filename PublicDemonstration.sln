@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreLibrary.Tests", "CoreLi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityApi", "IdentityApi\IdentityApi.csproj", "{47B6744A-0C40-4980-82A9-7E0720844A7B}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{11E6EDD5-E9DF-4E65-924C-E961336F1DF9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{47B6744A-0C40-4980-82A9-7E0720844A7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47B6744A-0C40-4980-82A9-7E0720844A7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47B6744A-0C40-4980-82A9-7E0720844A7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11E6EDD5-E9DF-4E65-924C-E961336F1DF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11E6EDD5-E9DF-4E65-924C-E961336F1DF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11E6EDD5-E9DF-4E65-924C-E961336F1DF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11E6EDD5-E9DF-4E65-924C-E961336F1DF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

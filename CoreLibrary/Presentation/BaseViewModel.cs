@@ -1,4 +1,6 @@
-﻿namespace CoreLibrary;
+﻿using CoreLibrary.Data;
+
+namespace CoreLibrary;
 
 public abstract class BaseViewModel
 {

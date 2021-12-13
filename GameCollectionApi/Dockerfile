@@ -6,7 +6,14 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
+#API Project
 COPY ["GameCollectionApi/GameCollectionApi.csproj", "GameCollectionApi/"]
+#Core Project
+COPY ["CoreLibrary/CoreLibrary.csproj", "CoreLibrary/"]
+#Game Collection Library Project
+COPY ["GameCollection/GameCollection.csproj", "GameCollection/"]
+#EntityFrameworkCore Repository Project
+COPY ["CoreLibrary.EfRepository/CoreLibrary.EfRepository.csproj", "CoreLibrary.EfRepository/"]
 RUN dotnet restore "GameCollectionApi/GameCollectionApi.csproj"
 COPY . .
 WORKDIR "/src/GameCollectionApi"
